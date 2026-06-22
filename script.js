@@ -10,7 +10,6 @@ const result = document.getElementById("result");
 
 const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/cr7vibjngws8zj2ik2xwqc94zmxgidns";
 
-
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
 
@@ -21,29 +20,29 @@ form.addEventListener("submit", async function (event) {
   const lead = {
     date: new Date().toLocaleString("ru-RU"),
     page: "builder_landing",
-
     name: formData.get("name") || "",
     company: formData.get("company") || "",
     phone: formData.get("phone") || "",
     email: formData.get("email") || "",
     interest: formData.get("interest") || "",
     comment: formData.get("comment") || "",
-
     telegramUsername: tg?.initDataUnsafe?.user?.username || "",
     telegramId: tg?.initDataUnsafe?.user?.id || "",
-
     source: "telegram_mini_app"
   };
 
   try {
-    await fetch(MAKE_WEBHOOK_URL, {
+    const response = await fetch(MAKE_WEBHOOK_URL, {
       method: "POST",
-      mode: "no-cors",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(lead)
     });
+
+    if (!response.ok) {
+      throw new Error("Make вернул ошибку");
+    }
 
     result.textContent = "Заявка отправлена. Мы скоро свяжемся с вами.";
     form.reset();
@@ -51,7 +50,6 @@ form.addEventListener("submit", async function (event) {
     if (tg) {
       tg.HapticFeedback.notificationOccurred("success");
     }
-
   } catch (error) {
     console.error("Ошибка:", error);
     result.textContent = "Ошибка соединения. Попробуйте позже.";
