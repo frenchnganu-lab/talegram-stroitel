@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111111;
+  color: #ffffff;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  padding: 36px 0 28px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 100px;
+  background: #2a2a2a;
+  color: #d6b06d;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 31px;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 14px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+p,
+li {
+  color: #d6d6d6;
+  line-height: 1.5;
+}
+
+.block {
+  margin-top: 34px;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.special {
+  border: 1px solid #d6b06d;
+  background: #1a1712;
+}
+
+.button,
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 14px;
+  background: #d6b06d;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  background: #1c1c1c;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d6b06d;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#result {
+  color: #d6b06d;
+  font-weight: 700;
+  margin-top: 16px;
+}
