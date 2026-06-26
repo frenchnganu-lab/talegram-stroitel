@@ -118,3 +118,8 @@ textarea {
   font-weight: 700;
   margin-top: 16px;
 }
+.logo {
+  display: block;
+  width: 180px;
+  margin: 0 auto 20px auto;
+}
