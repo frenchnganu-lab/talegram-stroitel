@@ -9,26 +9,34 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #111111;
-  color: #ffffff;
+  background: #FAFAFA;
+  color: #1A1A1A;
 }
 
 .app {
   max-width: 480px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 22px;
 }
 
 .hero {
-  padding: 36px 0 28px;
+  padding: 28px 0 32px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 190px;
+  margin: 0 auto 22px auto;
 }
 
 .badge {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 13px;
   border-radius: 100px;
-  background: #2a2a2a;
-  color: #d6b06d;
+  background: #eeeeee;
+  color: #1A1A1A;
+  font-size: 13px;
   font-weight: 700;
   margin-bottom: 18px;
 }
@@ -37,11 +45,13 @@ h1 {
   font-size: 31px;
   line-height: 1.1;
   margin: 0 0 16px;
+  letter-spacing: -0.6px;
 }
 
 h2 {
   font-size: 24px;
   margin: 0 0 14px;
+  letter-spacing: -0.3px;
 }
 
 h3 {
@@ -51,24 +61,61 @@ h3 {
 
 p,
 li {
-  color: #d6d6d6;
-  line-height: 1.5;
+  color: #444444;
+  line-height: 1.55;
 }
 
 .block {
   margin-top: 34px;
 }
 
-.card {
-  background: #1c1c1c;
+.card,
+.review,
+.quote {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
   border-radius: 18px;
   padding: 16px;
   margin-bottom: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .special {
-  border: 1px solid #d6b06d;
-  background: #1a1712;
+  border: 1px solid #1A1A1A;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.stat strong {
+  display: block;
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat span {
+  color: #555555;
+  font-size: 14px;
+}
+
+.quote,
+.review {
+  color: #555555;
+  font-style: italic;
 }
 
 .button,
@@ -79,8 +126,8 @@ button[type="submit"] {
   margin-top: 18px;
   border: none;
   border-radius: 14px;
-  background: #d6b06d;
-  color: #111111;
+  background: #1A1A1A;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
@@ -95,9 +142,9 @@ textarea {
   padding: 14px;
   margin-top: 10px;
   border-radius: 12px;
-  border: 1px solid #333333;
-  background: #1c1c1c;
-  color: #ffffff;
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  color: #1A1A1A;
   font-size: 15px;
   outline: none;
 }
@@ -105,7 +152,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #d6b06d;
+  border-color: #1A1A1A;
 }
 
 textarea {
@@ -114,12 +161,7 @@ textarea {
 }
 
 #result {
-  color: #d6b06d;
+  color: #1A1A1A;
   font-weight: 700;
   margin-top: 16px;
-}
-.logo {
-  display: block;
-  width: 180px;
-  margin: 0 auto 20px auto;
 }
